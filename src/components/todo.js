@@ -57,7 +57,7 @@ const Todo = ({todo,array, getPosts, title}) => {
             </div>
             }
             <div className='main-tasks'>
-            {array.length === 0 || array[0].title ? <p>Список пуст</p> : array.map((user, id) =><Task user={user} todo={todo} array={array} getPosts={getPosts} key={id} /> ) }
+            {array.length === 0 || (array[0].title && array.length ===1) ? <p>the list is empty</p> : array.map((user, id) =><Task user={user} todo={todo} array={array} getPosts={getPosts} key={id} /> ) }
             </div>
           </div>
         </>
